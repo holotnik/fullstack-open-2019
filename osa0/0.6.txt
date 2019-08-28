@@ -1,0 +1,9 @@
+title singlepageApp muistiinpanonlisäys
+
+käyttäjä->selain: Käyttäjä selaa sivulle
+note right of käyttäjä: käyttäjä kirjoittaa muistiinpanon \nja painaa 'Save'-näppäintä
+selain->palvelin: HTTP POST(https://fullstack-exampleapp.herokuapp.com/new_note_spa)
+
+palvelin->selain: STATUS CODE (201)
+selain->käyttäjä: Selain suorittaa tapahtumakäsittelijän ja Sivu renderöidään
+note right of käyttäjä: muistiinpano päivittyy, koska JS-koodissa ajetaan notes.push(*muistiinpano*)

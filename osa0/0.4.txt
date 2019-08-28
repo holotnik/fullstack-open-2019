@@ -1,0 +1,9 @@
+title Uusi muistiinpano
+
+käyttäjä->selain: Käyttäjäsyöte ja tallennus
+note right of käyttäjä: käyttäjä kirjoittaa muistiinpanon \nja painaa 'Save'-näppäintä
+selain->palvelin: HTTP POST (https://fullstack-exampleapp.herokuapp.com/new_note)
+palvelin->selain: STATUS CODE (302)
+selain->palvelin: HTTP GET(https://fullstack-exampleapp.herokuapp.com/data.json)
+palvelin->selain: STATUS CODE (200) + page content[...,{content:"*muistiinpano*", date: "*lähetyspäivä*"}]
+selain->käyttäjä: Selain suorittaa tapahtumakäsittelijän ja Sivu renderöidään

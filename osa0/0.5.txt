@@ -1,0 +1,7 @@
+title singlepageApp sivulle entraus
+
+käyttäjä->selain: Käyttäjä selaa sivulle
+note right of käyttäjä: (esim. kirjoittaa selaimeen https://fullstack-exampleapp.herokuapp.com/spa)
+selain->palvelin: HTTP GET(https://fullstack-exampleapp.herokuapp.com/spa)
+palvelin->selain: STATUS CODE (200) + page content[...]
+selain->käyttäjä: Selain suorittaa tapahtumakäsittelijän ja Sivu renderöidään
